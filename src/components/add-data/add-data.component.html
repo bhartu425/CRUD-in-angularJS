@@ -1,0 +1,17 @@
+<form class="container" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+    <label for="name">Name: </label>
+    <input class="form-control" id="name" type="text" formControlName="name">
+</div>
+<div class="formGroup">
+    <label for="email">Email: </label>
+    <input class="form-control" id="email" type="text" formControlName="email">  
+</div>
+<div class="formGroup">
+    <label for="contact">Contact: </label>
+    <input class="form-control" id="contact" type="text" formControlName="contact">  
+</div>
+    <button class="btn btn-primary m-3" type="submit">{{updatedData ?"Update User":"Add User"}}</button>
+    <button class="btn btn-primary m-3" (click)="clearall()">Clear All</button>
+
+</form>
